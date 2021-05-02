@@ -1,0 +1,11 @@
+name: 'Screenshot Taker'
+description: 'Takes screenshots from predefined objects in the Build Scene List'
+runs:
+        using: "composite"
+        steps:
+                - run: echo Taking Screenshots.
+                  shell: bash
+                - run: ${{ github.action_path }}/entry.sh
+                  shell: bash
+                - run: echo Finished taking Screenshots.
+                  shell: bash
